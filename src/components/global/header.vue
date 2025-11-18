@@ -3,10 +3,9 @@
     <div class="logo">F47</div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/products">Products</router-link></li>
       </ul>
     </nav>
     <button>Contact Us</button>

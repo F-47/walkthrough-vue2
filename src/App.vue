@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <Header logo="Fares" />
-    <Products />
+    <main>
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
 <script>
-import Products from "./components/Products.vue";
 import Header from "./components/global/header.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    Products,
   },
 };
 </script>
@@ -28,7 +28,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+}
+main {
+  padding: 2rem;
 }
 </style>

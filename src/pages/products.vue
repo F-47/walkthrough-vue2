@@ -1,6 +1,5 @@
 <template>
   <div class="products-container">
-    <!-- Search input -->
     <div class="header">
       <h1>All Products</h1>
       <input type="search" v-model="search" placeholder="Search products..." />
@@ -8,7 +7,6 @@
     <div v-if="loading">Loading...</div>
     <div v-else>
       <div class="cards-container">
-        <!-- Loop through filtered products -->
         <div class="card" v-for="product in filteredProducts" :key="product.id">
           <h3>{{ product.title }}</h3>
           <p>Price: ${{ product.price }}</p>
@@ -48,7 +46,7 @@ export default {
       this.loading = true;
       setTimeout(() => {
         this.loading = false;
-      }, 5000);
+      }, 2000);
     },
   },
   mounted() {
@@ -58,10 +56,6 @@ export default {
 </script>
 
 <style scoped>
-.products-container {
-  margin-top: 20px;
-  padding: 1rem 2rem;
-}
 .products-container .header {
   display: flex;
   justify-content: space-between;
