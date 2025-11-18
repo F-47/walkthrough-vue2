@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="logo">F47</div>
+    <router-link class="logo" to="/">F47</router-link>
     <nav>
       <ul>
         <li><router-link to="/">Home</router-link></li>
@@ -15,13 +15,6 @@
 <script>
 export default {
   name: "HeaderComponent",
-  props: {
-    logo: {
-      required: true,
-      default: "MyLogo",
-      type: String,
-    },
-  },
 };
 </script>
 
